@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All products</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTQh1Y1JjA3yW21RewAhxjanvaUoSkVZF3P5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+        html {
+        scroll-behavior: smooth;
+        transition: 1s cubic-bezier(.81,0,.63,.98);
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;font-family: "Lexend", sans-serif;
+            font-optical-sizing: auto;
+        }
+
+        .container {
+            max-width: 90%;
+            margin:  auto;
+        }
+
+        .product-container {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            padding-bottom: 100px;
+            padding-top: 100px;
+        }
+
+        .product img {
+            width: 400px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;        }
+
+        .product-details {
+            flex: 1;
+        }
+
+        .product-title {
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .product-price {
+            font-size: 24px;
+            font-weight: 600;
+            color: #e43326;
+            margin: 10px 0;
+        }
+
+        .product-description {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .link{
+            font-size: 30px;
+            width: 10%;
+            display: flex;
+            justify-content: space-around;
+        }
+        .buy-section button {
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .head{
+            margin-top: 20px;
+            padding-left: 10px;
+            width: 100%;
+            height: 20;
+            padding-top: 13px;
+            padding-bottom: 14px;
+            margin: auto;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.5);
+        }
+        .head a{
+            text-decoration: none;
+            color: black;
+            font-size: 25px;
+            margin-right: 20px;
+        }
+        #button{
+            font-family: "poppins";
+            font-weight: 600;
+            border-radius: 30px;
+            border: none;
+            background-image: linear-gradient(45deg ,#2d2d2d,#000000);
+            color: rgb(255, 255, 255);
+            border: solid 1px rgb(255, 255, 255);
+            transition: .5s;
+        }
+        #button:hover{
+            background-image: linear-gradient(45deg ,rgb(255, 255, 255),rgb(242, 240, 240));
+            color:#000000;
+            border: solid 1px #212121;
+            transition: .5s;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        }
+        .top{
+            border: solid 1px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            font-size: 24px;
+            padding: 10px;
+            width: 50px;
+            height: 50px; 
+            margin: 20px auto;
+            background-image: linear-gradient(45deg ,#2d2d2d,#000000);
+        }
+        .top a{
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 30px;
+            transition: .5s;
+        }
+        .top a:hover
+        {
+            transform: scale(1.2);
+            transition: .5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="head"><img src="img/Prada-Logo.svg" style="width: 150px;margin-left: 20px;" ><div class="link"><a href="webpage.html#men's wear"><i class='bx bx-arrow-back'></i></a><a href="webpage.html"><i class='bx bxs-home-alt-2' ></i></a></div></div><br>
+<br><br><br>
+<div class="top-P"></div>
+<div class="container">
+    <div class="product-container" id="1">
+        <div class="product">
+            <img src="img/Mens Next White Oversized Heavyweight T-Shirt -  white.jpg" alt="">
+        </div>
+        <div class="product-details">
+            <h1 class="product-title"> Oversized Heavyweight T-Shirt</h1>
+            <p class="product-price"> 299 ₹</p>
+            <p class="product-description">The oversized white heavyweight T-shirt gives off a clean and minimalistic vibe while maintaining a modern, relaxed fit.</p>
+            <div class="buy-section">
+                <form action="/purchase" method="POST">
+                    </i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><br><br><br>
+                    <button type="submit" id="button">Buy Now &nbsp;&nbsp;<i class='bx bxs-wallet' ></i></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" id="button">Add Cart &nbsp;&nbsp;<i class='bx bx-cart-add'></i> </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="product-container">
+        <div class="product">
+            <img src="img/shirt.jpg" alt="">
+        </div>
+        <div class="product-details">
+            <h1 class="product-title"> Grey plaid shirt</h1>
+            <p class="product-price"> 599 ₹</p>
+            <p class="product-description">Its soft, breathable fabric and tailored fit make it perfect for both casual and semi-formal looks.</p>
+            <div class="buy-section">
+                <form action="/purchase" method="POST">
+                    <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half'></i><br><br><br>
+                    <button type="submit" id="button">Buy Now &nbsp;&nbsp;<i class='bx bxs-wallet' ></i></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" id="button">Add Cart &nbsp;&nbsp;<i class='bx bx-cart-add'></i> </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="product-container">
+        <div class="product">
+            <img src="img/mens wear1.jpg" alt="">
+        </div>
+        <div class="product-details">
+            <h1 class="product-title">Beige linen shirt</h1>
+            <p class="product-price"> 449 ₹</p>
+            <p class="product-description">Its lightweight, breathable fabric keeps you cool, while the open-collar design adds a bold, laid-back charm.</p>
+            <div class="buy-section">
+                <form action="/purchase" method="POST">
+                    <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><br><br><br>
+                    <button type="submit" id="button">Buy Now &nbsp;&nbsp;<i class='bx bxs-wallet' ></i></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" id="button">Add Cart &nbsp;&nbsp;<i class='bx bx-cart-add'></i> </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="product-container">
+        <div class="product">
+            <img src="img/Men's Tank Top Graffiti Patten Urban Streetwear Clothes - S _ Darkolivegreen.jpg" alt="">
+        </div>
+        <div class="product-details">
+            <h1 class="product-title">Tank Top Graffiti </h1>
+            <p class="product-price"> 799 ₹</p>
+            <p class="product-description">This oversized sleeveless tee blends bold attitude with effortless comfort.</p>
+            <div class="buy-section">
+                <form action="/purchase" method="POST">
+                    <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half'></i><br><br><br>
+                    <button type="submit" id="button">Buy Now &nbsp;&nbsp;<i class='bx bxs-wallet' ></i></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" id="button">Add Cart &nbsp;&nbsp;<i class='bx bx-cart-add'></i> </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="product-container">
+        <div class="product">
+            <img src="img/women wears1.jpg" alt="">
+        </div>
+        <div class="product-details">
+            <h1 class="product-title"> Simple Shirt with Baggy pants</h1>
+            <p class="product-price"> 1999 ₹</p>
+            <p class="product-description">This chic white button-down and high-waisted beige trousers create a timeless, sophisticated look perfect for work or casual outings.</p>
+            <div class="buy-section">
+                <form action="/purchase" method="POST">
+                    </i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half'></i><br><br><br>
+                    <button type="submit" id="button">Buy Now &nbsp;&nbsp;<i class='bx bxs-wallet' ></i></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" id="button">Add Cart &nbsp;&nbsp;<i class='bx bx-cart-add'></i> </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="product-container">
+        <div class="product">
+            <img src="img/women wears2.jpg" alt="">
+        </div>
+        <div class="product-details">
+            <h1 class="product-title"> Bold & Edgy Streetwear </h1>
+            <p class="product-price"> 2,599 ₹</p>
+            <p class="product-description">Elevate your look with this effortlessly cool combination of a sleek black leather jacket, a relaxed-fit gray top, and vintage-wash denim jeans.Perfect for those who love minimalist fashion with an attitude.</p>
+            <div class="buy-section">
+                <form action="/purchase" method="POST">
+                    <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><br><br><br>
+                    <button type="submit" id="button">Buy Now &nbsp;&nbsp;<i class='bx bxs-wallet' ></i></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" id="button">Add Cart &nbsp;&nbsp;<i class='bx bx-cart-add'></i> </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="product-container">
+        <div class="product">
+            <img src="img/women wears3.jpg" alt="">
+        </div>
+        <div class="product-details">
+            <h1 class="product-title">Long Sleeve Square Neck A Line Mini Dress In Black    </h1>
+            <p class="product-price"> 2499 ₹</p>
+            <p class="product-description">Keep it classic, doll! Featuring a black material and long sleeves with a square neck design, this A-line mini dress is the ultimate go-to for effortless, flattering style.</p>
+            <div class="buy-section">
+                <form action="/purchase" method="POST">
+                    <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><br><br><br>
+                    <button type="submit" id="button">Buy Now &nbsp;&nbsp;<i class='bx bxs-wallet' ></i></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" id="button">Add Cart &nbsp;&nbsp;<i class='bx bx-cart-add'></i> </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="product-container">
+        <div class="product">
+            <img src="img/Bae Suzy.jpg" alt="">
+        </div>
+        <div class="product-details">
+            <h1 class="product-title">ASOS DESIGN off shoulder zip - soft cream shade</h1>
+            <p class="product-price"> 2349 ₹</p>
+            <p class="product-description">The cropped fit paired with a sleek black skirt creates an effortlessly stylish contrast.</p>
+            <div class="buy-section">
+                <form action="/purchase" method="POST">
+                    <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><br><br><br>
+                    <button type="submit" id="button">Buy Now &nbsp;&nbsp;<i class='bx bxs-wallet' ></i></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" id="button">Add Cart &nbsp;&nbsp;<i class='bx bx-cart-add'></i> </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="product-container">
+        <div class="product">
+            <img src="img/suite 1.jpg">
+        </div>
+        <div class="product-details">
+            <h1 class="product-title"> Cotton blend Suit - Black</h1>
+            <p class="product-price"> 2499 ₹</p>
+            <p class="product-description">Designed for the modern gentleman, it blends luxury with authority, making every moment a statement. </p>
+            <div class="buy-section">
+                <form action="/purchase" method="POST">
+                    </i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><br><br><br>
+                    <button type="submit" id="button">Buy Now &nbsp;&nbsp;<i class='bx bxs-wallet' ></i></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" id="button">Add Cart &nbsp;&nbsp;<i class='bx bx-cart-add'></i> </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="product-container">
+        <div class="product">
+            <img src="img/suite 2.jpg" alt="">
+        </div>
+        <div class="product-details">
+            <h1 class="product-title"> Slim wool blend suit waistcoat </h1>
+            <p class="product-price"> 2,699 ₹</p>
+            <p class="product-description">This vest suit blends modern sophistication with vintage flair, redefining elegance with every detail.</p>
+            <div class="buy-section">
+                <form action="/purchase" method="POST">
+                    <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><br><br><br>
+                    <button type="submit" id="button">Buy Now &nbsp;&nbsp;<i class='bx bxs-wallet' ></i></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" id="button">Add Cart &nbsp;&nbsp;<i class='bx bx-cart-add'></i> </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="product-container">
+        <div class="product">
+            <img src="img/suite 3.jpg"  style="width: 100;">
+        </div>
+        <div class="product-details">
+            <h1 class="product-title">Mango co-ord blazer and pants in black</h1>
+            <p class="product-price"> 5999 ₹</p>
+            <p class="product-description">Designed for the modern woman who commands attention and exudes confidence with every step.</p>
+            <div class="buy-section">
+                <form action="/purchase" method="POST">
+                    <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><br><br><br>
+                    <button type="submit" id="button">Buy Now &nbsp;&nbsp;<i class='bx bxs-wallet' ></i></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" id="button">Add Cart &nbsp;&nbsp;<i class='bx bx-cart-add'></i> </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="product-container">
+        <div class="product">
+            <img src="img/suite 4.jpg" alt="">
+        </div>
+        <div class="product-details">
+            <h1 class="product-title">SHEIN Privé Women's Long Sleeve Peaked Lapel Suit Set Business Suits </h1>
+            <p class="product-price"> 2199 ₹</p>
+            <p class="product-description">This tailored skirt suit blends elegance with authority, designed for the woman who leads with confidence and style.</p>
+            <div class="buy-section">
+                <form action="/purchase" method="POST">
+                    <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><br><br><br>
+                    <button type="submit" id="button">Buy Now &nbsp;&nbsp;<i class='bx bxs-wallet' ></i></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" id="button">Add Cart &nbsp;&nbsp;<i class='bx bx-cart-add'></i> </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="product-container">
+        <div class="product">
+            <img src="img/beauty0.jpg   ">
+        </div>
+        <div class="product-details">
+            <h1 class="product-title">Monochrome Lipstick collection</h1>
+            <p class="product-price"> 3,999 ₹</p>
+            <p class="product-description">​Prada's Monochrome Lipstick collection epitomizes luxury and innovation in beauty. Designed for the modern individual, these lipsticks offer both style and substance.​</p>
+            <div class="buy-section">
+                <form action="/purchase" method="POST">
+                    </i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half'></i><br><br><br>
+                    <button type="submit" id="button">Buy Now &nbsp;&nbsp;<i class='bx bxs-wallet' ></i></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" id="button">Add Cart &nbsp;&nbsp;<i class='bx bx-cart-add'></i> </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="product-container">
+        <div class="product">
+            <img src="img/beauty2.jpg" alt="">
+        </div>
+        <div class="product-details">
+            <h1 class="product-title">Paradoxe Eau De Parfum </h1>
+            <p class="product-price"> 7,999 ₹</p>
+            <p class="product-description">A feminine fragrance that explores the paradoxical nature of delicate ingredients, blending jasmine, amber, and moss accords</p>
+            <div class="buy-section">
+                <form action="/purchase" method="POST">
+                    <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><br><br><br>
+                    <button type="submit" id="button">Buy Now &nbsp;&nbsp;<i class='bx bxs-wallet' ></i></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" id="button">Add Cart &nbsp;&nbsp;<i class='bx bx-cart-add'></i> </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="product-container">
+        <div class="product">
+            <img src="img/bag1.jpg" alt="">
+        </div>
+        <div class="product-details">
+            <h1 class="product-title">Prada Galleria Bag</h1>
+            <p class="product-price"> 12,499₹</p>
+            <p class="product-description">Description: A refined silhouette with contemporary, minimalist lines, crafted from iconic materials like Saffiano leather.</p>
+            <div class="buy-section">
+                <form action="/purchase" method="POST">
+                    <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><br><br><br>
+                    <button type="submit" id="button">Buy Now &nbsp;&nbsp;<i class='bx bxs-wallet' ></i></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" id="button">Add Cart &nbsp;&nbsp;<i class='bx bx-cart-add'></i> </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="product-container">
+        <div class="product">
+            <img src="img/bag2.jpg" alt="">
+        </div>
+        <div class="product-details">
+            <h1 class="product-title">Re-Edition Bags</h1>
+            <p class="product-price"> 6,999 ₹</p>
+            <p class="product-description">Investing in a Prada handbag ensures a blend of functionality and enduring style, making it a valuable addition to any wardrobe.</p>
+            <div class="buy-section">
+                <form action="/purchase" method="POST">
+                    <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><br><br><br>
+                    <button type="submit" id="button">Buy Now &nbsp;&nbsp;<i class='bx bxs-wallet' ></i></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" id="button">Add Cart &nbsp;&nbsp;<i class='bx bx-cart-add'></i> </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="product-container">
+        <div class="product">
+            <img src="img/shoe1.jpg" alt="">
+        </div>
+        <div class="product-details">
+            <h1 class="product-title">Men's Monolith Boots</h1>
+            <p class="product-price"> 1,999 ₹</p>
+            <p class="product-description">Iconic boots characterized by a thick lug sole, offering a bold and contemporary aesthetic.</p>
+            <div class="buy-section">
+                <form action="/purchase" method="POST">
+                    </i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half'></i><br><br><br>
+                    <button type="submit" id="button">Buy Now &nbsp;&nbsp;<i class='bx bxs-wallet' ></i></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" id="button">Add Cart &nbsp;&nbsp;<i class='bx bx-cart-add'></i> </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="product-container">
+        <div class="product">
+            <img src="img/shoe2.jpg" alt="">
+        </div>
+        <div class="product-details">
+            <h1 class="product-title">Men's Ballet Flats</h1>
+            <p class="product-price"> 2,199 ₹</p>
+            <p class="product-description">Elegant options that combine comfort with Prada's signature style.</p>
+            <div class="buy-section">
+                <form action="/purchase" method="POST">
+                    <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><br><br><br>
+                    <button type="submit" id="button">Buy Now &nbsp;&nbsp;<i class='bx bxs-wallet' ></i></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" id="button">Add Cart &nbsp;&nbsp;<i class='bx bx-cart-add'></i> </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="product-container">
+        <div class="product">
+            <img src="img/shoe3.jpg" alt="">
+        </div>
+        <div class="product-details">
+            <h1 class="product-title">Women's Monolith Sandals</h1>
+            <p class="product-price"> 4,699 ₹</p>
+            <p class="product-description"> Sleek, stylish options perfect for high fashion looks.</p>
+            <div class="buy-section">
+                <form action="/purchase" method="POST">
+                    <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><br><br><br>
+                    <button type="submit" id="button">Buy Now &nbsp;&nbsp;<i class='bx bxs-wallet' ></i></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" id="button">Add Cart &nbsp;&nbsp;<i class='bx bx-cart-add'></i> </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="product-container">
+        <div class="product">
+            <img src="img/shone4.jpg" alt="">
+        </div>
+        <div class="product-details">
+            <h1 class="product-title">Slingback Pumps</h1>
+            <p class="product-price"> 7,099 ₹</p>
+            <p class="product-description">The cropped fit paired with a sleek black skirt creates an effortlessly stylish contrast.</p>
+            <div class="buy-section">
+                <form action="/purchase" method="POST">
+                    <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><br><br><br>
+                    <button type="submit" id="button">Buy Now &nbsp;&nbsp;<i class='bx bxs-wallet' ></i></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" id="button">Add Cart &nbsp;&nbsp;<i class='bx bx-cart-add'></i> </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="product-container">
+        <div class="product">
+            <img src="img/w1.jpg" alt="">
+        </div>
+        <div class="product-details">
+            <h1 class="product-title">Fortis Square UTC GMT - Golden rose</h1>
+            <p class="product-price"> 3,999 ₹</p>
+            <p class="product-description">FORTIS offers a Square Body Spray Shower Tile designed to enhance the shower experience with a modern aesthetic.</p>
+            <div class="buy-section">
+                <form action="/purchase" method="POST">
+                    </i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half'></i><br><br><br>
+                    <button type="submit" id="button">Buy Now &nbsp;&nbsp;<i class='bx bxs-wallet' ></i></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" id="button">Add Cart &nbsp;&nbsp;<i class='bx bx-cart-add'></i> </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="product-container">
+        <div class="product">
+            <img src="img/w2.jpg" alt="">
+        </div>
+        <div class="product-details">
+            <h1 class="product-title"> Tom Rice special edition A-11 </h1>
+            <p class="product-price"> 6,199 ₹</p>
+            <p class="product-description">This watch was designed by veterans to reproduce the standard edition timepiece our soldiers wore during WW2. Discover Tom Rice’s story and the “Lost watch of D-day”.
+                ... less</p>
+            <div class="buy-section">
+                <form action="/purchase" method="POST">
+                    <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><br><br><br>
+                    <button type="submit" id="button">Buy Now &nbsp;&nbsp;<i class='bx bxs-wallet' ></i></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" id="button">Add Cart &nbsp;&nbsp;<i class='bx bx-cart-add'></i> </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="product-container">
+        <div class="product">
+            <img src="img/w3.jpg" alt="">
+        </div>
+        <div class="product-details">
+            <h1 class="product-title">IWC Schaffhausen Top Gun Miramar</h1>
+            <p class="product-price"> 5,499 ₹</p>
+            <p class="product-description">The IWC Schaffhausen Top Gun Miramar is a high-end, military-inspired pilot's watch that combines Swiss precision with rugged aesthetics.</p>
+            <div class="buy-section">
+                <form action="/purchase" method="POST">
+                    <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><br><br><br>
+                    <button type="submit" id="button">Buy Now &nbsp;&nbsp;<i class='bx bxs-wallet' ></i></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" id="button">Add Cart &nbsp;&nbsp;<i class='bx bx-cart-add'></i> </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="product-container">
+        <div class="product">
+            <img src="img/w4.jpg" alt="">
+        </div>
+        <div class="product-details">
+            <h1 class="product-title">Řemínek Diesel DZ7366 26 mm</h1>
+            <p class="product-price"> 6,999 ₹</p>
+            <p class="product-description">The brand is recognized for its statement-making timepieces that blend modern technology with rugged, stylish designs.</p>
+            <div class="buy-section">
+                <form action="/purchase" method="POST">
+                    <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><br><br><br>
+                    <button type="submit" id="button">Buy Now &nbsp;&nbsp;<i class='bx bxs-wallet' ></i></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" id="button">Add Cart &nbsp;&nbsp;<i class='bx bx-cart-add'></i> </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="top">
+    <a href="#1"><i class='bx bxs-to-top'></i></a>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
